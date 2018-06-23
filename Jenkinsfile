@@ -1,6 +1,9 @@
 pipeline{
-agent none
-	stage("Mysql"){
-	sh 'docker-compose up .'
-}
+agent any
+	stages{
+		stage("Mysql"){
+			sh 'docker-compose up .'
+		}	
+	
+	}
 }
